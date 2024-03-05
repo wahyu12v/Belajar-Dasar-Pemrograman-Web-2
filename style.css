@@ -1,0 +1,401 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#movingImage {
+    position: relative;
+    left: 0;
+    transition: left 1s ease; 
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #DDE6ED;
+}
+
+
+header {
+    background-color: #27374D;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    padding: 10px;
+    color: white;
+}
+
+header p {
+    color: white;
+}
+
+nav {
+    background-color: #526D82;
+    position: sticky;
+    margin-top: 10px;
+    top: 0;
+    z-index: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+
+}
+
+li {
+    margin-right: 20px;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 15px 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #27374D;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px; 
+    margin-top: 20px;
+}
+
+
+.post-column {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.post-column article {
+    background-color: #F9F9F9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.post-column article:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.post-column img {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.post-column h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post-column p {
+    color: #555;
+    line-height: 1.6;
+    text-indent: 20px;
+    margin-bottom: 10px;
+}
+aside {
+    background-color: #F9F9F9;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 650px;
+}
+
+aside h1 {
+    font-size: 36px; 
+    color: #1e2224; 
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: color 0.3s ease-in-out; 
+}
+
+aside p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+aside img {
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+aside table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+aside table:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+aside th, aside td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+aside th {
+    background-color: #f2f2f2;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #27374D;
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* Responsif */
+
+@media only screen and (max-width: 1024px) {
+
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    li a {
+        padding: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr; 
+        grid-gap: 20px;
+    }
+
+    .post-column img {
+        width: 100%; 
+    }
+
+    .post-column h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    aside {
+        background-color: #F9F9F9;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    aside h1 {
+        font-size: 30px;
+    }
+
+    aside img {
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 150px; 
+        height: 150px; 
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    aside table {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    aside th, aside td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    aside th {
+        background-color: #f2f2f2;
+    }
+
+    aside p {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+
+    aside table:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .categories {
+        max-height: none; 
+        padding: 15px; 
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    li a {
+        padding: 8px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .post-column img {
+        width: 100%; 
+    }
+
+    .post-column h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    aside h1 {
+        font-size: 24px;
+    }
+
+    aside img {
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 150px; 
+        height: 150px; 
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    aside table {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    aside th, aside td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    aside th {
+        background-color: #f2f2f2;
+    }
+
+    aside p {
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    aside {
+        background-color: #F9F9F9;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    aside table:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .categories {
+        padding: 10px; 
+    }
+
+    .categories h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .categories ul {
+        justify-content: flex-start; 
+    }
+
+    .categories li {
+        margin: 5px; 
+    }
+
+    .categories a {
+        padding: 6px; 
+        font-size: 14px;
+    }
+
+    .categories img {
+        width: 80px; 
+        height: 80px;
+    }
+}
